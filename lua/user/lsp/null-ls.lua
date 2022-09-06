@@ -13,6 +13,7 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.prettier.with {
+      tab_width = 4,
       extra_filetypes = { "toml" },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
