@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use { "mattn/emmet-vim" }
   use {"vifm/vifm.vim"}
   use {"tpope/vim-surround"}
+  use {"ggandor/lightspeed.nvim"}
 
   -- Colorschemes
   use {"morhetz/gruvbox"}

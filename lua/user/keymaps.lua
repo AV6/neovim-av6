@@ -27,6 +27,11 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- vimdiff merge
+keymap("n", "<leader>ml", ":diffg RE<CR>", opts)
+keymap("n", "<leader>mh", ":diffg LO<CR>", opts)
+keymap("n", "<leader>mj", ":diffg BA<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
