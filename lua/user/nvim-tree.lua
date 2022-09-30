@@ -54,8 +54,7 @@ nvim_tree.setup {
     },
   },
   view = {
-    width = 30,
-    height = 30,
+    width = 50,
     side = "left",
     mappings = {
       list = {
@@ -64,5 +63,10 @@ nvim_tree.setup {
         { key = "v", cb = tree_cb "vsplit" },
       },
     },
+  },
+  actions = {
+      open_file = {
+          quit_on_open = true,
+      },
   },
 }
