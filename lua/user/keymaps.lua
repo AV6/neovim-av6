@@ -78,7 +78,7 @@ keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>;", ":Telescope commands<CR>", opts)
 
 -- Git
-keymap("n", "<leader>g", ":Neogit<CR>", opts)
+keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>c", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
