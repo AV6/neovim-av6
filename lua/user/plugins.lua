@@ -91,7 +91,11 @@ return packer.startup(function(use)
   -- Telescope
   use { "nvim-telescope/telescope.nvim"}
 
-  -- Treesitter
+  -- Org mode
+
+    use {'nvim-orgmode/orgmode'}
+
+    -- Treesitter
   use { "nvim-treesitter/nvim-treesitter"}
 
   -- Git
