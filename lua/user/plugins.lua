@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use {"vifm/vifm.vim"}
   use {"tpope/vim-surround"}
   use {"ggandor/lightspeed.nvim"}
+  use {'stevearc/dressing.nvim'}
 
   -- Colorschemes
   use {"morhetz/gruvbox"}
@@ -89,7 +90,6 @@ return packer.startup(function(use)
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim"}
-  use {'nvim-telescope/telescope-ui-select.nvim' }
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter"}

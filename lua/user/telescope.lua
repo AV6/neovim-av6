@@ -21,11 +21,5 @@ telescope.setup {
         ["<C-k>"] = actions.move_selection_previous,
       },
     },
-    extensions = {
-      ["ui-select"] = {
-        require("telescope.themes").get_ivy({}),
-      }
-    }
   },
 }
-telescope.load_extension("ui-select")
