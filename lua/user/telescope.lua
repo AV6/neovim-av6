@@ -7,7 +7,7 @@ local actions = require "telescope.actions"
 
 telescope.setup {
   defaults = {
-
+    preview = false,
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
@@ -21,5 +21,11 @@ telescope.setup {
         ["<C-k>"] = actions.move_selection_previous,
       },
     },
+    extensions = {
+      ["ui-select"] = {
+        require("telescope.themes").get_ivy({}),
+      }
+    }
   },
 }
+telescope.load_extension("ui-select")

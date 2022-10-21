@@ -65,17 +65,17 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 -- Vifm
-keymap("n", "<leader>o",":EditVifm<CR>", opts)
+keymap("n", "<leader>o", ":EditVifm<CR>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader><Space>", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>r", ":Telescope oldfiles<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<leader>;", ":Telescope commands<CR>", opts)
+keymap("n", "<leader><Space>", ":Telescope find_files theme=dropdown<CR>", opts)
+keymap("n", "<leader>r", ":Telescope oldfiles theme=dropdown<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope live_grep theme=dropdown preview=true<CR>", opts)
+keymap("n", "<leader>fp", ":Telescope projects theme=dropdown<CR>", opts)
+keymap("n", "<leader>;", ":Telescope commands theme=dropdown<CR>", opts)
 
 -- Git
 keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
