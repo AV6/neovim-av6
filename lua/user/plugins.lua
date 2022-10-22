@@ -93,9 +93,10 @@ return packer.startup(function(use)
 
   -- Org mode
 
-    use {'nvim-orgmode/orgmode'}
+  use {'nvim-orgmode/orgmode'}
+  use 'akinsho/org-bullets.nvim'
 
-    -- Treesitter
+  -- Treesitter
   use { "nvim-treesitter/nvim-treesitter"}
 
   -- Git

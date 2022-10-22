@@ -10,7 +10,12 @@ orgmode.setup({
     mappings = {
         global = {
             org_agenda = '<leader>aa',
-            org_capture = '<leader>ac'
+            org_capture = '<leader>ac',
+        },
+
+        org = {
+            org_toggle_checkbox = '<leader>d'
+
         }
     }
 })
