@@ -18,8 +18,12 @@ vim.g.mapleader = " "
 -- Normal --
 -- general
 keymap("n", "<leader>t", ":e ~/todo.org<CR>", opts)
-keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
+if not vim.g.neovide then
+    keymap("n", "<leader>q", ":q<CR>", opts)
+else
+    keymap("n", "<leader>q", ":%bd<CR>", opts)
+end
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -65,16 +69,18 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 -- Vifm
-keymap("n", "<leader>o", ":EditVifm<CR>", opts)
+--[[ keymap("n", "<leader>o", ":EditVifm<CR>", opts) ]]
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>o", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":e $MYVIMRC<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader><Space>", ":Telescope find_files theme=dropdown<CR>", opts)
-keymap("n", "<leader>r", ":Telescope oldfiles theme=dropdown<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep theme=dropdown preview=true<CR>", opts)
-keymap("n", "<leader>fp", ":Telescope projects theme=dropdown<CR>", opts)
+--keymap("n", "<leader>r", ":Telescope oldfiles theme=dropdown<CR>", opts)
+keymap("n", "<leader>r", ":source $MYVIMRC<CR>", opts)
+keymap("n", "<leader>a", ":Telescope live_grep theme=dropdown preview=true<CR>", opts)
+keymap("n", "<leader>p", ":Telescope projects theme=dropdown<CR>", opts)
 keymap("n", "<leader>;", ":Telescope commands theme=dropdown<CR>", opts)
 
 -- Git

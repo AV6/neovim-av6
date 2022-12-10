@@ -44,6 +44,8 @@ return packer.startup(function(use)
   use { "wbthomason/packer.nvim"} 
   use { "nvim-lua/plenary.nvim"} 
   use { "windwp/nvim-autopairs"} 
+
+  use { "windwp/nvim-ts-autotag" }
   use { "numToStr/Comment.nvim"}
   use { "JoosepAlviste/nvim-ts-context-commentstring"}
   use { "kyazdani42/nvim-web-devicons"}
@@ -61,6 +63,13 @@ return packer.startup(function(use)
   use {"tpope/vim-surround"}
   use {"ggandor/lightspeed.nvim"}
   use {'stevearc/dressing.nvim'}
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup { }
+    end
+  }
 
   -- Colorschemes
   use {"morhetz/gruvbox"}
