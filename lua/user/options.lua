@@ -39,7 +39,7 @@ vim.opt.wrap = false                            -- display lines as one long lin
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 --[[ vim.opt.guifont = "Fira Code Nerd Font:h15"               -- the font used in graphical neovim applications ]]
-vim.opt.guifont = "Hack Nerd Font:h15:b"               -- the font used in graphical neovim applications
+vim.opt.guifont = "Hack Nerd Font:h12:b"               -- the font used in graphical neovim applications
 --[[ vim.g.neovide_fullscreen = true ]]
 
 vim.opt.fillchars.eob=" "

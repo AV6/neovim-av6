@@ -70,6 +70,7 @@ return packer.startup(function(use)
       require("todo-comments").setup { }
     end
   }
+  use {"mg979/vim-visual-multi"}
 
   -- Colorschemes
   use {"morhetz/gruvbox"}
