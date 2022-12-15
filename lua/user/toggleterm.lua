@@ -54,21 +54,3 @@ function _LAZYGIT_TOGGLE()
 
 	lazygit:toggle()
 end
-
-function _VIFM_TOGGLE()
-    local vifm = Terminal:new {
-        cmd = "vifm",
-        hidden = true,
-        direction = "vertical",
-        close_on_exit = true,
-        on_open = function(_)
-            vim.cmd "startinsert!"
-        end,
-        on_close = function(_) end,
-        count = 99,
-    }
-
-	vifm:toggle()
-end
-
-
