@@ -77,8 +77,8 @@ keymap("n", "<leader>e", ":e $MYVIMRC<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader><Space>", ":Telescope find_files theme=dropdown<CR>", opts)
---keymap("n", "<leader>r", ":Telescope oldfiles theme=dropdown<CR>", opts)
-keymap("n", "<leader>r", ":source $MYVIMRC<CR>", opts)
+keymap("n", "<leader>r", ":Telescope oldfiles theme=dropdown<CR>", opts)
+--[[ keymap("n", "<leader>r", ":source $MYVIMRC<CR>", opts) ]]
 keymap("n", "<leader>a", ":Telescope live_grep theme=dropdown preview=true<CR>", opts)
 keymap("n", "<leader>p", ":Telescope projects theme=dropdown<CR>", opts)
 keymap("n", "<leader>;", ":Telescope commands theme=dropdown<CR>", opts)
