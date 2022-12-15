@@ -28,7 +28,7 @@ vim.opt.tabstop = 4                             -- insert 2 spaces for a tab
 vim.opt.softtabstop = 4
 vim.opt.ai = true
 vim.opt.cursorline = true                       -- highlight the current line
-vim.opt.number = true                           -- set numbered lines
+--[[ vim.opt.number = true                           -- set numbered lines ]]
 vim.opt.laststatus = 3
 vim.opt.showcmd = false
 vim.opt.ruler = false
@@ -38,9 +38,10 @@ vim.opt.confirm = true
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
---[[ vim.opt.guifont = "Fira Code Nerd Font:h15"               -- the font used in graphical neovim applications ]]
-vim.opt.guifont = "Hack Nerd Font:h15:b"               -- the font used in graphical neovim applications
+-- neovide specific
+vim.opt.guifont = "JetBrainsMono Nerd Font:h15:b"               -- the font used in graphical neovim applications
 --[[ vim.g.neovide_fullscreen = true ]]
+vim.g.neovide_padding_left = 8
 
 vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"

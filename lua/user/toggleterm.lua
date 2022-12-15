@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 20,
+	size = 60,
 	open_mapping = [[<c-enter>]],
 	hide_numbers = true,
 	shade_terminals = true,
@@ -12,7 +12,7 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
+	direction = "vertical",
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {
@@ -54,4 +54,21 @@ function _LAZYGIT_TOGGLE()
 
 	lazygit:toggle()
 end
+
+function _VIFM_TOGGLE()
+    local vifm = Terminal:new {
+        cmd = "vifm",
+        hidden = true,
+        direction = "vertical",
+        close_on_exit = true,
+        on_open = function(_)
+            vim.cmd "startinsert!"
+        end,
+        on_close = function(_) end,
+        count = 99,
+    }
+
+	vifm:toggle()
+end
+
 

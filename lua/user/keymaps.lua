@@ -22,7 +22,7 @@ keymap("n", "<leader>w", ":w<CR>", opts)
 if not vim.g.neovide then
     keymap("n", "<leader>q", ":q<CR>", opts)
 else
-    keymap("n", "<leader>q", ":%bd<CR>", opts)
+    keymap("n", "<leader>q", ":%bd<CR>:Bdelete<CR>:Alpha<CR>", opts)
 end
 
 -- Better window navigation
@@ -69,11 +69,15 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 -- Vifm
---[[ keymap("n", "<leader>o", ":EditVifm<CR>", opts) ]]
+keymap("n", "<leader>o", ":EditVifm<CR>", opts)
 
 -- NvimTree
-keymap("n", "<leader>o", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>e", ":e $MYVIMRC<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+--[[ keymap("n", "<leader>e", ":e $MYVIMRC<CR>", opts) ]]
+
+--Toggleterm
+keymap("v", "<leader><cr>", ":ToggleTermSendVisualLines<CR>", opts)
+keymap("n", "<leader><cr>", ":ToggleTermSendCurrentLine<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader><Space>", ":Telescope find_files theme=dropdown<CR>", opts)

@@ -78,6 +78,7 @@ return packer.startup(function(use)
   use "EdenEast/nightfox.nvim"
   use "sainnhe/gruvbox-material"
   use 'NLKNguyen/papercolor-theme'
+  use 'projekt0n/github-nvim-theme'
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp"}
