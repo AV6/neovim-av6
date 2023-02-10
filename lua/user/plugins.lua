@@ -71,6 +71,7 @@ return packer.startup(function(use)
     end
   }
   use {"mg979/vim-visual-multi"}
+  use {'MunifTanjim/nui.nvim'}
 
   -- Colorschemes
   use {"morhetz/gruvbox"}
@@ -79,6 +80,12 @@ return packer.startup(function(use)
   use "sainnhe/gruvbox-material"
   use 'NLKNguyen/papercolor-theme'
   use 'projekt0n/github-nvim-theme'
+  use {
+  "loctvl842/monokai-pro.nvim",
+      config = function()
+        require("monokai-pro").setup()
+      end
+    }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp"}
