@@ -6,7 +6,7 @@ end
 orgmode.setup_ts_grammar()
 orgmode.setup({
     org_agenda_files = {'~/org/*'},
-    org_default_notes_file = '~/org/notes.org',
+    org_default_notes_file = '~/org/todo.org',
     mappings = {
         global = {
             org_agenda = '<leader>aa',
@@ -14,7 +14,8 @@ orgmode.setup({
         },
 
         org = {
-            org_toggle_checkbox = '<leader>d'
+            org_toggle_checkbox = '<leader>d',
+            org_toggle_heading = '<leader>h'
 
         }
     }

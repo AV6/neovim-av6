@@ -7,10 +7,6 @@ configs.setup({
     incremental_selection = {
       enable = true,
       keymaps = {
-        init_selection = "<TAB>",
-        node_incremental = "<TAB>",
-        scope_incremental = "<CR>",
-        node_decremental = "<S-TAB>",
       },
     },
     autotag = {

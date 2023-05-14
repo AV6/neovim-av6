@@ -17,7 +17,8 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- general
-keymap("n", "<leader>t", ":e ~/todo.org<CR>", opts)
+keymap("n", "<leader>z", "za", opts)
+keymap("n", "<leader>t", ":e ~/org/todo.org<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 if not vim.g.neovide then
     keymap("n", "<leader>q", ":q<CR>", opts)
