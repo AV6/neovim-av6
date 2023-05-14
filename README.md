@@ -1,1 +1,1 @@
-# neovim configuration for av6.dev
+# neovim configuration
