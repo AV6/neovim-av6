@@ -78,6 +78,7 @@ return packer.startup(function(use)
   use "EdenEast/nightfox.nvim"
   use "sainnhe/gruvbox-material"
   use 'NLKNguyen/papercolor-theme'
+  use { "catppuccin/nvim", as = "catppuccin" }
   use 'projekt0n/github-nvim-theme'
   use {
   "loctvl842/monokai-pro.nvim",
@@ -115,6 +116,26 @@ return packer.startup(function(use)
 
   use {'nvim-orgmode/orgmode'}
   use 'akinsho/org-bullets.nvim'
+    use {
+        "nvim-neorg/neorg",
+        config = function()
+            require('neorg').setup {
+                load = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                notes = "~/notes",
+                            },
+                        },
+                    },
+                },
+            }
+        end,
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+    }
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter"}

@@ -7,12 +7,12 @@ if not monokai_status_ok then
 end
 
 monokai.setup({
-    filter="octagon"
+    filter="pro"
 })
 
 
 vim.opt.background = "dark"
-local colorscheme = "monokai-pro"
+local colorscheme = "catppuccin"
 
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
